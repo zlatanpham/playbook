@@ -97,6 +97,10 @@ app/
 
 ## Linting
 
+It is good to know and follow the community standard style guide, for example the popular one from [Airbnb](https://github.com/airbnb/javascript/tree/master/react) but debating style nits in code review is not an option because we have other million decisions to make. Linting should be automated. We use `ESLint` for detecting syntax errors and `Prettier` with IDE integration for code formatting whenever a save button is hit.
+
+Additionally, we also rely on `husky` and `lint-staged` to format our code whenever we make a commit in git.
+
 ## Code Splitting
 
 Modern sites often combine all of their JavaScript into a single, large bundle. When JavaScript is served this way, loading performance suffers. Large amounts of JavaScript can also tie up the main thread, delaying interactivity. This is especially true of devices with less memory and processing power especially in routing rich applications like ours. To address the issue, we adopt code-splitting in order to split one large bundle into smaller chunks. While the main is loaded upfront, the rest can be loaded on demand. If you are unsure where to begin to applying code-splitting to our applications, follow these steps:
